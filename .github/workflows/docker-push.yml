@@ -2,7 +2,9 @@ name: docker-push
 
 on:
   push:
-    branches: master
+    branches:
+      - master
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
@@ -10,7 +12,7 @@ env:
   IMAGE_TAG: latest
 
 jobs:
-  login:
+  build:
     runs-on: ubuntu-latest
     steps:
       -
