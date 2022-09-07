@@ -4,6 +4,7 @@ FROM pandoc/latex
 
 RUN apk add --no-cache \
     make \
+    ruby-mustache \
     # texlive
     zip \
     && tlmgr update --self \
